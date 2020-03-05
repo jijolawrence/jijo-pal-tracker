@@ -2,7 +2,7 @@ applications:
 - name: jijo-pal-tracker-new
   memory: 1G
   instances: 1
-  path: build/libs/jijo-pal-tracker.jar
+  path: build/libs/jijo-pal-tracker-new.jar
   routes:
   - route: jijo-pal-tracker-new.apps.apcf.cihpcf.io
 

@@ -21,8 +21,8 @@ jobs:
       - name: Publish artifact
         uses: actions/upload-artifact@v1
         with:
-          name: pal-tracker
-          path: build/libs/pal-tracker.jar
+          name: jijo-pal-tracker-new
+          path: build/libs/jijo-pal-tracker-new.jar
 
   deploy:
     needs: build-and-publish
@@ -38,11 +38,11 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v1
         with:
-          name: pal-tracker
+          name: jijo-pal-tracker-new
       - name: Deploy to cf
         run: |
           cf login -a "$CF_API_URL" -o "$CF_ORG" -s "$CF_SPACE" -u "$CF_USERNAME" -p "$CF_PASSWORD"
-          cf push -p ./pal-tracker/pal-tracker.jar
+          cf push -p ./jijo-pal-tracker-new/jijo-pal-tracker-new.jar
         env:
           CF_API_URL: ${{ secrets.CF_API_URL }}
           CF_ORG: ${{ secrets.CF_ORG }}
