@@ -5,4 +5,6 @@ applications:
   path: build/libs/jijo-pal-tracker-new.jar
   routes:
   - route: jijo-pal-tracker-new.apps.apcf.cihpcf.io
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: { jre: { version: 11.+ } }
 
