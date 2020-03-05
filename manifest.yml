@@ -6,5 +6,4 @@ applications:
   routes:
   - route: jijo-pal-tracker-new.apps.apcf.cihpcf.io
   env:
-    JBP_CONFIG_OPEN_JDK_JRE: { jre: { version: 11.+ } }
-
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
