@@ -1,6 +1,6 @@
 applications:
 - name: jijo-pal-tracker-new
-  memory: 512M
+  memory: 756M
   instances: 1
   path: build/libs/jijo-pal-tracker-new.jar
   routes:
