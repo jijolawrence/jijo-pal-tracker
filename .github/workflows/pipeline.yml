@@ -17,11 +17,14 @@ jobs:
       run: |
         mysql -uroot -proot < databases/tracker/create_databases.sql
 
-        chmod +x scripts/migrate-databases.sh
+        chmod +x ./gradlew
 
         ./gradlew testMigrate
     - name: Build with Gradle
-      run: ./gradlew build
+      run:
+        chmod +x ./gradlew
+
+        ./gradlew build
     - name: Publish artifact
       uses: actions/upload-artifact@v1
       with:
